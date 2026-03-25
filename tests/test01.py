@@ -8,9 +8,9 @@ from pathlib import Path
 
 import numpy as np
 
-from artiemis_pt.dynamixel.control_adapter import PITCH_RANGE_RAD
-from artiemis_pt.dynamixel.control_loop import LatestValueControlLoop
-from artiemis_pt.dynamixel.contronller import DynamixelConfig
+from artemis_pt.dynamixel.control_adapter import PITCH_RANGE_RAD
+from artemis_pt.dynamixel.control_loop import LatestValueControlLoop
+from artemis_pt.dynamixel.contronller import DynamixelConfig
 
 
 def format_array(value: np.ndarray | None) -> str:
@@ -122,7 +122,7 @@ def main() -> None:
         description="Send one target per second to the real Dynamixel control loop."
     )
     parser.add_argument("--device", default="COM9")
-    parser.add_argument("--baudrate", type=int, default=57600)
+    parser.add_argument("--baudrate", type=int, default=1000000)
     parser.add_argument("--frequency", type=float, default=20.0)
     parser.add_argument("--update-hz", type=float, default=5.0)
     parser.add_argument("--segment-duration", type=float, default=1.0)

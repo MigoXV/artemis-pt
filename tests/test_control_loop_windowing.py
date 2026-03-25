@@ -4,7 +4,7 @@ import unittest
 
 import numpy as np
 
-from artiemis_pt.dynamixel.control_loop import LatestValueControlLoop
+from artemis_pt.dynamixel.control_loop import LatestValueControlLoop
 
 
 def deg(value: float) -> float:

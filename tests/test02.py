@@ -7,8 +7,8 @@ import time
 
 import numpy as np
 
-from artiemis_pt.dynamixel.control_loop import LatestValueControlLoop
-from artiemis_pt.dynamixel.contronller import DynamixelConfig
+from artemis_pt.dynamixel.control_loop import LatestValueControlLoop
+from artemis_pt.dynamixel.contronller import DynamixelConfig
 
 YAW_DELTA_DEG = 100.0
 STARTUP_DELAY_SEC = 2.0
@@ -100,7 +100,7 @@ def main() -> None:
         description="Start the control loop, wait 2 seconds, then rotate yaw by 45 degrees."
     )
     parser.add_argument("--device", default="COM9")
-    parser.add_argument("--baudrate", type=int, default=57600)
+    parser.add_argument("--baudrate", type=int, default=1000000)
     parser.add_argument("--frequency", type=float, default=20.0)
     parser.add_argument("--max-errors", type=int, default=3)
     parser.add_argument("--startup-delay", type=float, default=STARTUP_DELAY_SEC)
